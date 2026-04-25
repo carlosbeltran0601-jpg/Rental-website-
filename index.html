@@ -3,80 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Property Rentals | Book Direct & Save</title>
+    <title>Carlos Property Rentals</title>
     <style>
-        /* Modern, clean styling */
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f8f9fa; color: #333; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; color: #2c3e50; line-height: 1.6; }
         
-        /* Hero Section */
-        header { background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80') center/cover; color: white; padding: 100px 20px; text-align: center; }
-        .property-tag { display: inline-block; background: #f1c40f; color: #2c3e50; padding: 5px 15px; border-radius: 20px; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; font-size: 0.85rem; margin-bottom: 15px; }
-        h1 { margin: 0; font-size: 3rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .subtitle { font-size: 1.2rem; max-width: 600px; margin: 15px auto; line-height: 1.5; }
-        
-        /* Main Content */
-        .container { max-width: 900px; margin: auto; padding: 40px 20px; }
-        h2 { color: #2c3e50; font-size: 2rem; text-align: center; margin-bottom: 10px; }
-        .intro-text { text-align: center; font-size: 1.1rem; color: #555; margin-bottom: 40px; }
+        /* Language Switcher */
+        .lang-switch { background: #1a252f; padding: 10px; text-align: right; }
+        .lang-btn { background: #f1c40f; border: none; color: #2c3e50; padding: 5px 15px; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 0.8rem; }
 
-        /* Reviews Section */
-        .reviews { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-bottom: 40px; }
-        .review-card { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); flex: 1 1 250px; max-width: 400px; border-top: 4px solid #f1c40f; }
-        .stars { color: #f1c40f; font-size: 1.2rem; margin-bottom: 10px; }
-        .review-text { font-style: italic; color: #666; margin-bottom: 15px; }
-        .reviewer { font-weight: bold; color: #2c3e50; font-size: 0.9rem; }
-
-        /* Contact & Call to Action */
-        .contact-box { background: white; padding: 40px 20px; border-radius: 15px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
-        .contact-box h3 { font-size: 1.8rem; margin-top: 0; color: #2c3e50; }
-        .contact-details { font-size: 1.2rem; margin: 20px 0; }
-        .contact-details a { color: #2c3e50; font-weight: bold; text-decoration: none; display: block; margin: 10px 0; }
+        header { background: #2c3e50; color: white; padding: 60px 20px; text-align: center; border-bottom: 5px solid #f1c40f; }
+        .branding { text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; color: #f1c40f; font-weight: bold; margin-bottom: 10px; }
+        h1 { margin: 0; font-size: 2.5rem; }
         
-        /* Buttons */
-        .btn { background: #2c3e50; color: #f1c40f; padding: 18px 40px; text-decoration: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; display: inline-block; transition: 0.3s; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-        .btn:hover { background: #1a252f; transform: translateY(-2px); }
-        .btn-email { background: #f1c40f; color: #2c3e50; margin-top: 15px; }
-        .btn-email:hover { background: #d4ac0d; }
+        .container { max-width: 850px; margin: auto; padding: 40px 20px; }
+        .main-card { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); text-align: center; }
+        
+        .feature-list { text-align: left; max-width: 500px; margin: 30px auto; list-style: none; padding: 0; }
+        .feature-list li { padding: 10px 0; border-bottom: 1px solid #eee; font-size: 1.1rem; }
+        .feature-list li::before { content: "✓ "; color: #f1c40f; font-weight: bold; }
+
+        .contact-section { margin-top: 40px; border-top: 2px solid #f4f7f6; padding-top: 30px; }
+        .phone-link { font-size: 1.8rem; color: #2c3e50; text-decoration: none; font-weight: bold; display: block; margin: 15px 0; }
+        
+        .cta-button { background: #f1c40f; color: #2c3e50; padding: 20px 40px; text-decoration: none; border-radius: 5px; font-weight: bold; font-size: 1.2rem; display: inline-block; margin-top: 25px; }
+
+        /* Logic to hide/show languages */
+        .lang-es { display: none; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="property-tag">Premium Short-Term Stays</div>
-        <h1>Carlos Property Rentals</h1>
-        <p class="subtitle">Skip the middleman fees. Book direct for the best rates, spotless properties, and unmatched hospitality.</p>
-    </header>
+    <div class="lang-switch">
+        <button class="lang-btn" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" onclick="switchLang('es')">Español</button>
+    </div>
 
-    <div class="container">
-        <h2>Your Perfect Getaway Awaits</h2>
-        <p class="intro-text">Whether you're traveling for business or a well-deserved vacation, our properties are designed with your absolute comfort in mind. Fully furnished, professionally cleaned, and ready for you.</p>
-        
-        <div class="reviews">
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Absolutely beautiful property. The house was spotless, the beds were incredibly comfortable, and Carlos was so easy to communicate with. We will definitely be back!"</p>
-                <div class="reviewer">— Sarah T., Recent Guest</div>
+    <div id="en-content" class="lang-en">
+        <header>
+            <div class="branding">Residential Leasing & Management</div>
+            <h1>Carlos Property Rentals</h1>
+            <p>Quality Homes for Long-Term Residents</p>
+        </header>
+        <div class="container">
+            <div class="main-card">
+                <h2>Find Your Forever Home</h2>
+                <p>Specializing in high-quality, long-term rentals. We provide reliable, well-maintained spaces you can call home.</p>
+                <ul class="feature-list">
+                    <li>Annual and Multi-Year Leases Available</li>
+                    <li>Professionally Maintained Properties</li>
+                    <li>Direct Owner Communication</li>
+                </ul>
+                <div class="contact-section">
+                    <h3>Interested in Leasing?</h3>
+                    <a href="tel:8134993860" class="phone-link">813-499-3860</a>
+                    <p>Email: carlosrents1@yahoo.com</p>
+                    <a href="tel:8134993860" class="cta-button">Inquire About Availability</a>
+                </div>
             </div>
-            <div class="review-card">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <p class="review-text">"Five stars all the way. Booking directly saved us a lot of money compared to Airbnb, and the service was just as good, if not better. Highly recommend!"</p>
-                <div class="reviewer">— Mark & Linda W., Recent Guests</div>
-            </div>
-        </div>
-
-        <div class="contact-box">
-            <h3>Ready to Book?</h3>
-            <p>Contact me directly to check availability and lock in your dates.</p>
-            
-            <div class="contact-details">
-                <a href="tel:8134993860">📞 813-499-3860</a>
-                <a href="mailto:carlosrents1@yahoo.com">📧 carlosrents1@yahoo.com</a>
-            </div>
-
-            <a href="tel:8134993860" class="btn">Call Now to Book</a><br>
-            <a href="mailto:carlosrents1@yahoo.com" class="btn btn-email">Email Inquiries</a>
         </div>
     </div>
+
+    <div id="es-content" class="lang-es">
+        <header>
+            <div class="branding">Arrendamiento y Administración Residencial</div>
+            <h1>Propiedades de Carlos</h1>
+            <p>Casas de Calidad para Residentes a Largo Plazo</p>
+        </header>
+        <div class="container">
+            <div class="main-card">
+                <h2>Encuentre su Hogar Permanente</h2>
+                <p>Especializados en alquileres de alta calidad a largo plazo. Ofrecemos espacios confiables y bien mantenidos.</p>
+                <ul class="feature-list">
+                    <li>Contratos Anuales y de Varios Años</li>
+                    <li>Propiedades con Mantenimiento Profesional</li>
+                    <li>Comunicación Directa con el Dueño</li>
+                </ul>
+                <div class="contact-section">
+                    <h3>¿Interesado en Alquilar?</h3>
+                    <a href="tel:8134993860" class="phone-link">813-499-3860</a>
+                    <p>Correo: carlosrents1@yahoo.com</p>
+                    <a href="tel:8134993860" class="cta-button">Preguntar Disponibilidad</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang) {
+            if (lang === 'es') {
+                document.getElementById('es-content').style.display = 'block';
+                document.getElementById('en-content').style.display = 'none';
+            } else {
+                document.getElementById('es-content').style.display = 'none';
+                document.getElementById('en-content').style.display = 'block';
+            }
+        }
+    </script>
 
 </body>
 </html>
