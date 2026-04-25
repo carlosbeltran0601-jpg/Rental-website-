@@ -5,83 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Property Rentals | Tampa Bay</title>
     <style>
-        /* Deep Charcoal & Bronze Theme */
+        /* Clean White & Bronze Theme */
         body { 
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #121212; /* Darker, richer black */
-            color: #e0e0e0; 
+            background-color: #ffffff; 
+            color: #333; 
             line-height: 1.6; 
         }
         
-        /* Floating Language Toggle */
+        /* Language Toggle */
         .lang-switch { position: absolute; top: 15px; right: 15px; z-index: 1000; }
         .btn-lang { 
-            background: linear-gradient(145deg, #cd7f32, #a56324); 
+            background: #cd7f32; 
             border: none; 
-            padding: 10px 20px; 
+            padding: 8px 16px; 
             cursor: pointer; 
             font-weight: bold; 
-            border-radius: 30px; 
+            border-radius: 4px; 
             color: #fff; 
-            box-shadow: 0 4px 15px rgba(205, 127, 50, 0.3);
         }
 
-        /* Metallic Header */
+        /* Header */
         header { 
-            background: linear-gradient(180deg, #1a1a1a 0%, #2c2c2c 100%); 
-            padding: 50px 20px; 
+            background: #1a1a1a; 
+            padding: 40px 20px; 
             text-align: center; 
-            border-bottom: 4px solid #cd7f32; 
+            border-bottom: 5px solid #cd7f32; 
         }
         
         .logo { 
-            max-width: 220px; 
+            max-width: 200px; 
             height: auto; 
-            margin-bottom: 15px; 
-            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+            margin-bottom: 10px; 
         }
         
-        h1 { margin: 0; font-size: 2.4rem; color: #cd7f32; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; }
-        .tagline { color: #b8b8b8; font-weight: 600; text-transform: uppercase; margin-top: 8px; display: block; letter-spacing: 2px; font-size: 0.85rem; }
+        h1 { margin: 0; font-size: 2rem; color: #cd7f32; text-transform: uppercase; letter-spacing: 2px; }
+        .tagline { color: #eee; font-weight: 600; text-transform: uppercase; margin-top: 5px; display: block; letter-spacing: 1px; font-size: 0.8rem; }
 
-        /* Main Content Box */
+        /* Content Container */
         .container { 
-            max-width: 850px; 
-            margin: -20px auto 40px; 
-            padding: 40px; 
-            background: #1e1e1e; 
-            border-radius: 12px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
-            border: 1px solid #333;
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
         }
         
-        h2 { color: #cd7f32; font-size: 1.8rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        h3 { color: #a56324; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; }
-
+        h2 { color: #1a1a1a; font-size: 1.8rem; border-bottom: 2px solid #cd7f32; display: inline-block; padding-bottom: 5px; }
+        
         /* Review Styling */
         .reviews-grid { margin: 30px 0; }
         .review-card { 
-            background: #252525; 
+            background: #f9f9f9; 
             padding: 20px; 
             border-left: 4px solid #cd7f32; 
             margin-bottom: 20px; 
-            border-radius: 8px; 
-            transition: transform 0.3s ease;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
-        .review-card:hover { transform: translateY(-5px); background: #2a2a2a; }
-        .stars { color: #cd7f32; font-size: 1.2rem; margin-bottom: 8px; }
+        .stars { color: #cd7f32; margin-bottom: 5px; }
         
         /* Contact Section */
         .contact-info { 
             text-align: center; 
             margin-top: 40px; 
             padding: 40px; 
-            background: linear-gradient(145deg, #1a1a1a, #252525); 
+            background: #1a1a1a; 
             color: white; 
-            border-radius: 12px; 
-            border: 2px solid #cd7f32; 
+            border-radius: 8px; 
         }
         .phone { 
             font-size: 2.2rem; 
@@ -90,24 +81,20 @@
             text-decoration: none; 
             display: block; 
             margin: 10px 0; 
-            text-shadow: 0px 0px 10px rgba(205, 127, 50, 0.2);
         }
-        .email { color: #aaa; font-size: 1.1rem; text-decoration: none; display: block; margin-bottom: 25px; }
+        .email { color: #ccc; font-size: 1.1rem; text-decoration: none; display: block; margin-bottom: 25px; }
         
-        /* The "Call" Button */
+        /* The Call Button */
         .call-btn { 
-            background: linear-gradient(145deg, #cd7f32, #a56324); 
+            background: #cd7f32; 
             color: white; 
-            padding: 18px 50px; 
+            padding: 15px 40px; 
             text-decoration: none; 
             display: inline-block; 
-            border-radius: 50px; 
+            border-radius: 4px; 
             font-weight: bold; 
-            font-size: 1.3rem; 
-            box-shadow: 0 4px 20px rgba(205, 127, 50, 0.4);
-            transition: 0.3s;
+            font-size: 1.2rem; 
         }
-        .call-btn:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(205, 127, 50, 0.6); }
 
         .hidden { display: none; }
     </style>
@@ -125,25 +112,25 @@
             <span class="tagline">Residential Leasing • Tampa Bay Area</span>
         </header>
         <div class="container">
-            <h2>Luxury Long-Term Living</h2>
-            <p style="color: #bbb;">We provide high-quality, long-term residential rentals across the Tampa Bay area. Our homes are meticulously maintained for tenants looking for stability and professional management.</p>
+            <h2>Quality Long-Term Housing</h2>
+            <p>We provide reliable, high-quality residential rentals across the Tampa Bay area. Our properties are well-maintained for tenants seeking long-term stability and professional management.</p>
             
             <div class="reviews-grid">
-                <h3>What Our Residents Say</h3>
+                <h3>Resident Feedback</h3>
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Excellent experience. The property was in perfect condition and Carlos is incredibly responsive to any needs."</p>
-                    <strong style="color: #cd7f32;">— Michael R.</strong>
+                    <p>"Excellent experience. The property was in perfect condition and Carlos is incredibly responsive to any maintenance needs."</p>
+                    <strong>— Michael R.</strong>
                 </div>
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Best landlord I've had in the Bay Area. Honest, fair, and the houses are always top-tier."</p>
-                    <strong style="color: #cd7f32;">— Sarah J.</strong>
+                    <p>"Great landlord. Honest, fair, and the homes are always kept in great shape. Highly recommend for long-term renting."</p>
+                    <strong>— Sarah J.</strong>
                 </div>
             </div>
 
             <div class="contact-info">
-                <h3>Schedule a Viewing</h3>
+                <h3>Contact Us Today</h3>
                 <a href="tel:8134993860" class="phone">813-499-3860</a>
                 <a href="mailto:carlosrents1@yahoo.com" class="email">carlosrents1@yahoo.com</a>
                 <a href="tel:8134993860" class="call-btn">Call Now</a>
@@ -158,20 +145,20 @@
             <span class="tagline">Alquiler Residencial • Área de Tampa Bay</span>
         </header>
         <div class="container">
-            <h2>Viviendas de Lujo a Largo Plazo</h2>
-            <p style="color: #bbb;">Ofrecemos alquileres residenciales de alta calidad en toda el área de Tampa Bay. Nuestras casas están mantenidas meticulosamente para inquilinos que buscan estabilidad.</p>
+            <h2>Viviendas de Calidad a Largo Plazo</h2>
+            <p>Ofrecemos alquileres residenciales confiables y de alta calidad en toda el área de Tampa Bay. Nuestras casas están bien mantenidas para inquilinos que buscan estabilidad a largo plazo.</p>
             
             <div class="reviews-grid">
-                <h3>Lo Que Dicen Nuestros Residentes</h3>
+                <h3>Comentarios de Residentes</h3>
                 <div class="review-card">
                     <div class="stars">★★★★★</div>
-                    <p>"Excelente experiencia. La propiedad estaba en perfectas condiciones y Carlos es increíblemente atento."</p>
-                    <strong style="color: #cd7f32;">— Michael R.</strong>
+                    <p>"Excelente experiencia. La propiedad estaba en perfectas condiciones y Carlos es increíblemente atento a cualquier necesidad."</p>
+                    <strong>— Michael R.</strong>
                 </div>
             </div>
 
             <div class="contact-info">
-                <h3>Programar una Visita</h3>
+                <h3>Contáctenos Hoy</h3>
                 <a href="tel:8134993860" class="phone">813-499-3860</a>
                 <a href="mailto:carlosrents1@yahoo.com" class="email">carlosrents1@yahoo.com</a>
                 <a href="tel:8134993860" class="call-btn">Llamar Ahora</a>
