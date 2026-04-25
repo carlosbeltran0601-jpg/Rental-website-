@@ -5,35 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carlos Property Rentals | Tampa Bay</title>
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #1a1a1a; color: #e0e0e0; line-height: 1.6; }
-        
-        .lang-switch { position: absolute; top: 15px; right: 15px; z-index: 1000; }
-        .btn-lang { background: #cd7f32; border: none; padding: 8px 15px; cursor: pointer; font-weight: bold; border-radius: 20px; color: #1a1a1a; }
-
-        header { 
-            background: #1a1a1a; 
-            padding: 60px 20px; 
-            text-align: center; 
-            border-bottom: 3px solid #cd7f32; 
+        /* Deep Charcoal & Bronze Theme */
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #121212; /* Darker, richer black */
+            color: #e0e0e0; 
+            line-height: 1.6; 
         }
         
-        .logo { max-width: 200px; height: auto; margin-bottom: 20px; }
-        
-        h1 { margin: 0; font-size: 2.2rem; color: #cd7f32; text-transform: uppercase; letter-spacing: 2px; }
-        .tagline { color: #a5a5a5; font-weight: bold; text-transform: uppercase; margin-top: 10px; display: block; letter-spacing: 1px; font-size: 0.9rem; }
+        /* Floating Language Toggle */
+        .lang-switch { position: absolute; top: 15px; right: 15px; z-index: 1000; }
+        .btn-lang { 
+            background: linear-gradient(145deg, #cd7f32, #a56324); 
+            border: none; 
+            padding: 10px 20px; 
+            cursor: pointer; 
+            font-weight: bold; 
+            border-radius: 30px; 
+            color: #fff; 
+            box-shadow: 0 4px 15px rgba(205, 127, 50, 0.3);
+        }
 
-        .container { max-width: 800px; margin: 20px auto; padding: 30px; background: #262626; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.5); }
+        /* Metallic Header */
+        header { 
+            background: linear-gradient(180deg, #1a1a1a 0%, #2c2c2c 100%); 
+            padding: 50px 20px; 
+            text-align: center; 
+            border-bottom: 4px solid #cd7f32; 
+        }
         
-        h2, h3 { color: #cd7f32; }
+        .logo { 
+            max-width: 220px; 
+            height: auto; 
+            margin-bottom: 15px; 
+            filter: drop-shadow(0px 4px 8px rgba(0,0,0,0.5));
+        }
+        
+        h1 { margin: 0; font-size: 2.4rem; color: #cd7f32; text-transform: uppercase; letter-spacing: 3px; font-weight: 800; }
+        .tagline { color: #b8b8b8; font-weight: 600; text-transform: uppercase; margin-top: 8px; display: block; letter-spacing: 2px; font-size: 0.85rem; }
 
-        .reviews-grid { margin: 30px 0; border-top: 1px solid #444; padding-top: 20px; }
-        .review-card { background: #333; padding: 15px; border-left: 5px solid #cd7f32; margin-bottom: 20px; border-radius: 4px; }
-        .stars { color: #cd7f32; font-size: 1.1rem; margin-bottom: 5px; }
+        /* Main Content Box */
+        .container { 
+            max-width: 850px; 
+            margin: -20px auto 40px; 
+            padding: 40px; 
+            background: #1e1e1e; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.7); 
+            border: 1px solid #333;
+        }
         
-        .contact-info { text-align: center; margin-top: 30px; padding: 30px; background: #1a1a1a; color: white; border-radius: 8px; border: 1px solid #cd7f32; }
-        .phone { font-size: 2rem; font-weight: bold; color: #cd7f32; text-decoration: none; display: block; margin: 15px 0; }
-        .email { color: #ccc; font-size: 1.1rem; text-decoration: none; display: block; margin-bottom: 20px; }
-        .call-btn { background: #cd7f32; color: #1a1a1a; padding: 15px 40px; text-decoration: none; display: inline-block; border-radius: 5px; font-weight: bold; font-size: 1.2rem; }
+        h2 { color: #cd7f32; font-size: 1.8rem; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        h3 { color: #a56324; text-transform: uppercase; font-size: 1rem; letter-spacing: 1px; }
+
+        /* Review Styling */
+        .reviews-grid { margin: 30px 0; }
+        .review-card { 
+            background: #252525; 
+            padding: 20px; 
+            border-left: 4px solid #cd7f32; 
+            margin-bottom: 20px; 
+            border-radius: 8px; 
+            transition: transform 0.3s ease;
+        }
+        .review-card:hover { transform: translateY(-5px); background: #2a2a2a; }
+        .stars { color: #cd7f32; font-size: 1.2rem; margin-bottom: 8px; }
+        
+        /* Contact Section */
+        .contact-info { 
+            text-align: center; 
+            margin-top: 40px; 
+            padding: 40px; 
+            background: linear-gradient(145deg, #1a1a1a, #252525); 
+            color: white; 
+            border-radius: 12px; 
+            border: 2px solid #cd7f32; 
+        }
+        .phone { 
+            font-size: 2.2rem; 
+            font-weight: bold; 
+            color: #cd7f32; 
+            text-decoration: none; 
+            display: block; 
+            margin: 10px 0; 
+            text-shadow: 0px 0px 10px rgba(205, 127, 50, 0.2);
+        }
+        .email { color: #aaa; font-size: 1.1rem; text-decoration: none; display: block; margin-bottom: 25px; }
+        
+        /* The "Call" Button */
+        .call-btn { 
+            background: linear-gradient(145deg, #cd7f32, #a56324); 
+            color: white; 
+            padding: 18px 50px; 
+            text-decoration: none; 
+            display: inline-block; 
+            border-radius: 50px; 
+            font-weight: bold; 
+            font-size: 1.3rem; 
+            box-shadow: 0 4px 20px rgba(205, 127, 50, 0.4);
+            transition: 0.3s;
+        }
+        .call-btn:hover { transform: scale(1.05); box-shadow: 0 6px 25px rgba(205, 127, 50, 0.6); }
 
         .hidden { display: none; }
     </style>
@@ -46,76 +120,61 @@
 
     <div id="en">
         <header>
-            <img src="logo.png" alt="Carlos Rents Logo" class="logo">
+            <img src="IMG_0205.png" alt="Carlos Rents Logo" class="logo">
             <h1>Carlos Property Rentals</h1>
             <span class="tagline">Residential Leasing • Tampa Bay Area</span>
         </header>
         <div class="container">
-            <h2>Reliable Homes in Tampa Bay</h2>
-            <p>We provide high-quality, long-term residential rentals across the Tampa Bay area. We take pride in offering well-maintained spaces where tenants can settle down for years to come.</p>
+            <h2>Luxury Long-Term Living</h2>
+            <p style="color: #bbb;">We provide high-quality, long-term residential rentals across the Tampa Bay area. Our homes are meticulously maintained for tenants looking for stability and professional management.</p>
             
             <div class="reviews-grid">
                 <h3>What Our Residents Say</h3>
                 <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Great experience. The property was in perfect condition and Carlos is very responsive to any maintenance requests."</p>
-                    <strong>— Michael R.</strong>
+                    <div class="stars">★★★★★</div>
+                    <p>"Excellent experience. The property was in perfect condition and Carlos is incredibly responsive to any needs."</p>
+                    <strong style="color: #cd7f32;">— Michael R.</strong>
                 </div>
                 <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"I've lived in one of Carlos's properties for 3 years. Best landlord I've ever had in Tampa. Fair and honest."</p>
-                    <strong>— Sarah J.</strong>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Highly recommend. The application process was smooth and the house felt like home from day one."</p>
-                    <strong>— David L.</strong>
+                    <div class="stars">★★★★★</div>
+                    <p>"Best landlord I've had in the Bay Area. Honest, fair, and the houses are always top-tier."</p>
+                    <strong style="color: #cd7f32;">— Sarah J.</strong>
                 </div>
             </div>
 
             <div class="contact-info">
-                <h3>Interested in Leasing?</h3>
+                <h3>Schedule a Viewing</h3>
                 <a href="tel:8134993860" class="phone">813-499-3860</a>
                 <a href="mailto:carlosrents1@yahoo.com" class="email">carlosrents1@yahoo.com</a>
-                <a href="tel:8134993860" class="call-btn">Call to Inquire</a>
+                <a href="tel:8134993860" class="call-btn">Call Now</a>
             </div>
         </div>
     </div>
 
     <div id="es" class="hidden">
         <header>
-            <img src="logo.png" alt="Carlos Rents Logo" class="logo">
+            <img src="IMG_0205.png" alt="Carlos Rents Logo" class="logo">
             <h1>Propiedades de Carlos</h1>
-            <span class="tagline">Viviendas a Largo Plazo • Área de Tampa Bay</span>
+            <span class="tagline">Alquiler Residencial • Área de Tampa Bay</span>
         </header>
         <div class="container">
-            <h2>Hogares Confiables en Tampa Bay</h2>
-            <p>Ofrecemos alquileres residenciales de alta calidad a largo plazo en toda el área de Tampa Bay. Nos enorgullecemos de ofrecer espacios bien mantenidos donde los inquilinos pueden establecerse por años.</p>
+            <h2>Viviendas de Lujo a Largo Plazo</h2>
+            <p style="color: #bbb;">Ofrecemos alquileres residenciales de alta calidad en toda el área de Tampa Bay. Nuestras casas están mantenidas meticulosamente para inquilinos que buscan estabilidad.</p>
             
             <div class="reviews-grid">
                 <h3>Lo Que Dicen Nuestros Residentes</h3>
                 <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Excelente experiencia. La propiedad estaba en perfectas condiciones y Carlos responde muy rápido a cualquier pedido."</p>
-                    <strong>— Michael R.</strong>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"He vivido en una de las propiedades de Carlos por 3 años. El mejor dueño que he tenido en Tampa. Justo y honesto."</p>
-                    <strong>— Sarah J.</strong>
-                </div>
-                <div class="review-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p>"Muy recomendado. El proceso de solicitud fue sencillo y la casa se sintió como un hogar desde el primer día."</p>
-                    <strong>— David L.</strong>
+                    <div class="stars">★★★★★</div>
+                    <p>"Excelente experiencia. La propiedad estaba en perfectas condiciones y Carlos es increíblemente atento."</p>
+                    <strong style="color: #cd7f32;">— Michael R.</strong>
                 </div>
             </div>
 
             <div class="contact-info">
-                <h3>¿Interesado en Alquilar?</h3>
+                <h3>Programar una Visita</h3>
                 <a href="tel:8134993860" class="phone">813-499-3860</a>
                 <a href="mailto:carlosrents1@yahoo.com" class="email">carlosrents1@yahoo.com</a>
-                <a href="tel:8134993860" class="call-btn">Llamar para Información</a>
+                <a href="tel:8134993860" class="call-btn">Llamar Ahora</a>
             </div>
         </div>
     </div>
